@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="MasterPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="dynamicRegion1" taskFlowId="${pageFlowScope.DRBean.dynamicTaskFlowId}"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding" Refresh="ifNeeded"
+              activation="conditional" active="#{true}">
+      <parameters>
+        <parameter id="Parameter1" value="#{viewScope.NewMasterBean.myText}"/>
+      </parameters>
+    </taskFlow>
+  </executables>
+  <bindings/>
+</pageDefinition>
